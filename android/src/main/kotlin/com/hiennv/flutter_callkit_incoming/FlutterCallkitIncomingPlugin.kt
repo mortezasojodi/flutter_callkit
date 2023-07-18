@@ -2,7 +2,9 @@ package com.hiennv.flutter_callkit_incoming
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.ActivityManager
 import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Handler
 import android.os.Looper
 import androidx.annotation.NonNull
@@ -143,6 +145,47 @@ class FlutterCallkitIncomingPlugin : FlutterPlugin, MethodCallHandler, ActivityA
         }
     }
 
+    fun getAppState(context: Context): String {
+        val packageManager = context.packageManager
+        try {
+            // Get package info
+            val packageInfo = packageManager.getPackageInfo(context.packageName, 0)
+
+            // Get activity manager
+            val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+
+            // Check if the app is in the foreground
+            val appProcesses = activityManager.runningAppProcesses
+            for (appProcess in appProcesses) {
+                if (appProcess.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND && appProcess.processName == context.packageName) {
+                    return "Running"
+                }
+            }
+
+            // Check if the app is in the background
+//            val tasks = activityManager.getRunningTasks(1)
+//            if (!tasks.isEmpty()) {
+//                val topActivity = tasks[0].topActivity
+//                if (topActivity!!.packageName == context.packageName) {
+//                    return "Background"
+//                }
+//            }
+
+            val appTasks = activityManager.appTasks!!
+            for (appTask in appTasks) {
+                val packageName : String? =  appTask.taskInfo!!.baseActivity!!.packageName
+                if (packageName == context.packageName) {
+                    return "Background"
+                }
+            }
+            // App is not in the foreground or background
+            return "Terminated"
+        } catch (e: PackageManager.NameNotFoundException) {
+            // App is not installed
+            return "Not installed"
+        }
+    }
+
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         try {
             when (call.method) {
@@ -159,7 +202,8 @@ class FlutterCallkitIncomingPlugin : FlutterPlugin, MethodCallHandler, ActivityA
                     result.success("OK")
                 }
                 "isBackground" -> {
-                    result.success("OK")
+                    val state= getAppState(context!!)
+                    result.success(state)
                 }
                 "showMissCallNotification" -> {
                     val data = Data(call.arguments() ?: HashMap())
