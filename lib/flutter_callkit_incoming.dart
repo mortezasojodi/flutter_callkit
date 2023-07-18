@@ -43,6 +43,10 @@ class FlutterCallkitIncoming {
     await _channel.invokeMethod("showCallkitIncoming", params.toJson());
   }
 
+  static Future isInBackground(CallKitParams params) async {
+    await _channel.invokeMethod("isBackground", params.toJson());
+  }
+
   /// Show Miss Call Notification.
   /// Only Android
   static Future showMissCallNotification(CallKitParams params) async {

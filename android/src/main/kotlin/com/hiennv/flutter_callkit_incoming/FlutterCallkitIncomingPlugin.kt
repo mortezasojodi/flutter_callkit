@@ -158,6 +158,9 @@ class FlutterCallkitIncomingPlugin : FlutterPlugin, MethodCallHandler, ActivityA
                     )
                     result.success("OK")
                 }
+                "isBackground" -> {
+                    result.success("OK")
+                }
                 "showMissCallNotification" -> {
                     val data = Data(call.arguments() ?: HashMap())
                     data.from = "notification"
