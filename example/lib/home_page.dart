@@ -5,7 +5,6 @@ import 'package:flutter_callkit_incoming/entities/android_params.dart';
 import 'package:flutter_callkit_incoming/entities/call_event.dart';
 import 'package:flutter_callkit_incoming/entities/call_kit_params.dart';
 import 'package:flutter_callkit_incoming/entities/ios_params.dart';
-import 'package:flutter_callkit_incoming/entities/notification_params.dart';
 import 'package:flutter_callkit_incoming/flutter_callkit_incoming.dart';
 import 'package:flutter_callkit_incoming_example/app_router.dart';
 import 'package:flutter_callkit_incoming_example/navigation_service.dart';
@@ -123,21 +122,19 @@ class HomePageState extends State<HomePage> {
         appName: 'Callkit',
         avatar: 'https://i.pravatar.cc/100',
         handle: '0123456789',
-        type: 1,
+        type: 0,
         duration: 30000,
         textAccept: 'Accept',
         textDecline: 'Decline',
-        missedCallNotification: NotificationParams(
-          showNotification: true,
-          isShowCallback: true,
-          subtitle: 'Missed call',
-          callbackText: 'Call back',
-        ),
+        textMissedCall: 'Missed call',
+        textCallback: 'Call back',
         extra: <String, dynamic>{'userId': '1a2b3c4d'},
         headers: <String, dynamic>{'apiKey': 'Abc@123!', 'platform': 'flutter'},
         android: AndroidParams(
           isCustomNotification: true,
           isShowLogo: false,
+          isShowCallback: true,
+          isShowMissedCallNotification: true,
           ringtonePath: 'system_ringtone_default',
           backgroundColor: '#0955fa',
           backgroundUrl: 'assets/test.png',
@@ -204,51 +201,49 @@ class HomePageState extends State<HomePage> {
       FlutterCallkitIncoming.onEvent.listen((event) async {
         print('HOME: $event');
         switch (event!.event) {
-          case Event.actionCallIncoming:
+          case Event.ACTION_CALL_INCOMING:
             // TODO: received an incoming call
             break;
-          case Event.actionCallStart:
+          case Event.ACTION_CALL_START:
             // TODO: started an outgoing call
             // TODO: show screen calling in Flutter
             break;
-          case Event.actionCallAccept:
+          case Event.ACTION_CALL_ACCEPT:
             // TODO: accepted an incoming call
             // TODO: show screen calling in Flutter
             NavigationService.instance
                 .pushNamedIfNotCurrent(AppRoute.callingPage, args: event.body);
             break;
-          case Event.actionCallDecline:
+          case Event.ACTION_CALL_DECLINE:
             // TODO: declined an incoming call
             await requestHttp("ACTION_CALL_DECLINE_FROM_DART");
             break;
-          case Event.actionCallEnded:
+          case Event.ACTION_CALL_ENDED:
             // TODO: ended an incoming/outgoing call
             break;
-          case Event.actionCallTimeout:
+          case Event.ACTION_CALL_TIMEOUT:
             // TODO: missed an incoming call
             break;
-          case Event.actionCallCallback:
+          case Event.ACTION_CALL_CALLBACK:
             // TODO: only Android - click action `Call back` from missed call notification
             break;
-          case Event.actionCallToggleHold:
+          case Event.ACTION_CALL_TOGGLE_HOLD:
             // TODO: only iOS
             break;
-          case Event.actionCallToggleMute:
+          case Event.ACTION_CALL_TOGGLE_MUTE:
             // TODO: only iOS
             break;
-          case Event.actionCallToggleDmtf:
+          case Event.ACTION_CALL_TOGGLE_DMTF:
             // TODO: only iOS
             break;
-          case Event.actionCallToggleGroup:
+          case Event.ACTION_CALL_TOGGLE_GROUP:
             // TODO: only iOS
             break;
-          case Event.actionCallToggleAudioSession:
+          case Event.ACTION_CALL_TOGGLE_AUDIO_SESSION:
             // TODO: only iOS
             break;
-          case Event.actionDidUpdateDevicePushTokenVoip:
+          case Event.ACTION_DID_UPDATE_DEVICE_PUSH_TOKEN_VOIP:
             // TODO: only iOS
-            break;
-          case Event.actionCallCustom:
             break;
         }
         if (callback != null) {

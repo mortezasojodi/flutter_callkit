@@ -1,4 +1,3 @@
-import 'package:flutter_callkit_incoming/entities/notification_params.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'android_params.dart';
@@ -19,7 +18,8 @@ class CallKitParams {
     this.duration,
     this.textAccept,
     this.textDecline,
-    this.missedCallNotification,
+    this.textMissedCall,
+    this.textCallback,
     this.extra,
     this.headers,
     this.android,
@@ -31,11 +31,12 @@ class CallKitParams {
   final String? appName;
   final String? avatar;
   final String? handle;
-  final int? type;
-  final int? duration;
+  final double? type;
+  final double? duration;
   final String? textAccept;
   final String? textDecline;
-  final NotificationParams? missedCallNotification;
+  final String? textMissedCall;
+  final String? textCallback;
   final Map<String, dynamic>? extra;
   final Map<String, dynamic>? headers;
   final AndroidParams? android;

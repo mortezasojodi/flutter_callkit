@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_callkit_incoming/entities/entities.dart';
@@ -17,44 +16,12 @@ class CallingPage extends StatefulWidget {
 class CallingPageState extends State<CallingPage> {
   late CallKitParams? calling;
 
-  Timer? _timer = null;
-  int _start = 0;
-
-  void startTimer() {
-    const oneSec = const Duration(seconds: 1);
-    _timer = new Timer.periodic(
-      oneSec,
-      (Timer timer) {
-        setState(() {
-          _start++;
-        });
-      },
-    );
-  }
-
-  String intToTimeLeft(int value) {
-    int h, m, s;
-    h = value ~/ 3600;
-    m = ((value - h * 3600)) ~/ 60;
-    s = value - (h * 3600) - (m * 60);
-    String hourLeft =
-        h.toString().length < 2 ? "0" + h.toString() : h.toString();
-    String minuteLeft =
-        m.toString().length < 2 ? "0" + m.toString() : m.toString();
-    String secondsLeft =
-        s.toString().length < 2 ? "0" + s.toString() : s.toString();
-    String result = "$hourLeft:$minuteLeft:$secondsLeft";
-    return result;
-  }
-
   @override
   Widget build(BuildContext context) {
     final params = jsonDecode(jsonEncode(
         ModalRoute.of(context)!.settings.arguments as Map<dynamic, dynamic>));
-    print(ModalRoute.of(context)!.settings.arguments);
     calling = CallKitParams.fromJson(params);
-
-    var timeDisplay = intToTimeLeft(_start);
+    debugPrint(calling?.toJson().toString());
 
     return Scaffold(
       body: Container(
@@ -65,7 +32,6 @@ class CallingPageState extends State<CallingPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('$timeDisplay'),
               Text('Calling...'),
               TextButton(
                 style: ButtonStyle(
@@ -74,20 +40,7 @@ class CallingPageState extends State<CallingPage> {
                 ),
                 onPressed: () async {
                   if (calling != null) {
-                    await makeFakeConnectedCall(calling!.id!);
-                    startTimer();
-                  }
-                },
-                child: Text('Fake Connected Call'),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                  foregroundColor:
-                      MaterialStateProperty.all<Color>(Colors.blue),
-                ),
-                onPressed: () async {
-                  if (calling != null) {
-                    await makeEndCall(calling!.id!);
+                    FlutterCallkitIncoming.endCall(calling!.id!);
                     calling = null;
                   }
                   NavigationService.instance.goBack();
@@ -102,14 +55,6 @@ class CallingPageState extends State<CallingPage> {
     );
   }
 
-  Future<void> makeFakeConnectedCall(id) async {
-    await FlutterCallkitIncoming.setCallConnected(id);
-  }
-
-  Future<void> makeEndCall(id) async {
-    await FlutterCallkitIncoming.endCall(id);
-  }
-
   //check with https://webhook.site/#!/2748bc41-8599-4093-b8ad-93fd328f1cd2
   Future<void> requestHttp(content) async {
     get(Uri.parse(
@@ -119,7 +64,6 @@ class CallingPageState extends State<CallingPage> {
   @override
   void dispose() {
     super.dispose();
-    _timer?.cancel();
     if (calling != null) FlutterCallkitIncoming.endCall(calling!.id!);
   }
 }

@@ -10,51 +10,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c50dd7d-9886-4c4b-810c-700c92be69fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/dictionaries/hiennguyen92.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Dart_SDK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations/example_lib_main_dart.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-rules.pro" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/AppUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/Call.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/Call.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitConstants.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitIncomingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitIncomingActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitIncomingBroadcastReceiver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitIncomingBroadcastReceiver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitNotificationManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitNotificationManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitSoundPlayerService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitSoundPlayerService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/FlutterCallkitIncomingPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/FlutterCallkitIncomingPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/SharedPreferencesUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/SharedPreferencesUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/TransparentActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/TransparentActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout-w600dp-land/activity_callkit_incoming.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/.metadata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/android/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/layout_custom_small_notification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/layout_custom_small_notification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../example/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/../example/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/../example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../example/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/../example/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../example/ios/Podfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../example/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../example/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../example/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/lib/app_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/lib/app_router.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../example/lib/calling_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/lib/calling_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../example/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/lib/home_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/Classes/Call.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Classes/Call.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/Classes/CallManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Classes/CallManager.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/Classes/SwiftFlutterCallkitIncomingPlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Classes/SwiftFlutterCallkitIncomingPlugin.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/Classes/WeakArray.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/android_params.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/entities/android_params.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/android_params.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/entities/android_params.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/call_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/entities/call_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/call_kit_params.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/entities/call_kit_params.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/call_kit_params.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/entities/call_kit_params.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/entities.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/entities/entities.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/ios_params.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/entities/ios_params.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/ios_params.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/entities/ios_params.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/notification_params.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/entities/notification_params.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/flutter_callkit_incoming.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/flutter_callkit_incoming.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/flutter_callkit_incoming_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../test/flutter_callkit_incoming_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +108,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/FlutterCallkitIncomingPlugin.kt</url>
-          <line>203</line>
+          <line>199</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
