@@ -13,8 +13,6 @@ import 'package:http/http.dart';
 import 'package:uuid/uuid.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
   @override
   State<StatefulWidget> createState() {
     return HomePageState();
@@ -29,7 +27,7 @@ class HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    _uuid = const Uuid();
+    _uuid = Uuid();
     _currentUuid = "";
     textEvents = "";
     initCurrentCall();
@@ -43,35 +41,35 @@ class HomePageState extends State<HomePage> {
         title: const Text('Plugin example app'),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.call,
               color: Colors.white,
             ),
             onPressed: makeFakeCallInComing,
           ),
           IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.call_end,
               color: Colors.white,
             ),
             onPressed: endCurrentCall,
           ),
           IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.call_made,
               color: Colors.white,
             ),
             onPressed: startOutGoingCall,
           ),
           IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.call_merge,
               color: Colors.white,
             ),
             onPressed: activeCalls,
           ),
           IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.clear_all_sharp,
               color: Colors.white,
             ),
@@ -87,11 +85,11 @@ class HomePageState extends State<HomePage> {
                 constraints: BoxConstraints(
                   minHeight: viewportConstraints.maxHeight,
                 ),
-                child: Text(textEvents),
+                child: Text('$textEvents'),
               ),
             );
           } else {
-            return const Center(
+            return Center(
               child: Text('No Event'),
             );
           }
@@ -100,7 +98,7 @@ class HomePageState extends State<HomePage> {
     );
   }
 
-  Future<dynamic> initCurrentCall() async {
+  initCurrentCall() async {
     //check current call from pushkit if possible
     var calls = await FlutterCallkitIncoming.activeCalls();
     if (calls is List) {
@@ -129,7 +127,7 @@ class HomePageState extends State<HomePage> {
         duration: 30000,
         textAccept: 'Accept',
         textDecline: 'Decline',
-        missedCallNotification: const NotificationParams(
+        missedCallNotification: NotificationParams(
           showNotification: true,
           isShowCallback: true,
           subtitle: 'Missed call',
@@ -137,7 +135,7 @@ class HomePageState extends State<HomePage> {
         ),
         extra: <String, dynamic>{'userId': '1a2b3c4d'},
         headers: <String, dynamic>{'apiKey': 'Abc@123!', 'platform': 'flutter'},
-        android: const AndroidParams(
+        android: AndroidParams(
           isCustomNotification: true,
           isShowLogo: false,
           ringtonePath: 'system_ringtone_default',
@@ -147,7 +145,7 @@ class HomePageState extends State<HomePage> {
           incomingCallNotificationChannelName: 'Incoming Call',
           missedCallNotificationChannelName: 'Missed Call',
         ),
-        ios: const IOSParams(
+        ios: IOSParams(
           iconName: 'CallKitLogo',
           handleType: '',
           supportsVideo: true,
@@ -181,7 +179,7 @@ class HomePageState extends State<HomePage> {
       handle: '0123456789',
       type: 1,
       extra: <String, dynamic>{'userId': '1a2b3c4d'},
-      ios: const IOSParams(handleType: 'number'),
+      ios: IOSParams(handleType: 'number'),
     );
     await FlutterCallkitIncoming.startCall(params);
   }
@@ -201,7 +199,7 @@ class HomePageState extends State<HomePage> {
     print(devicePushTokenVoIP);
   }
 
-  Future<void> listenerEvent(void Function(CallEvent) callback) async {
+  Future<void> listenerEvent(Function? callback) async {
     try {
       FlutterCallkitIncoming.onEvent.listen((event) async {
         print('HOME: $event');
@@ -253,11 +251,11 @@ class HomePageState extends State<HomePage> {
           case Event.actionCallCustom:
             break;
         }
-        callback(event);
+        if (callback != null) {
+          callback(event.toString());
+        }
       });
-    } on Exception catch (e) {
-      print(e);
-    }
+    } on Exception {}
   }
 
   //check with https://webhook.site/#!/2748bc41-8599-4093-b8ad-93fd328f1cd2
@@ -266,10 +264,10 @@ class HomePageState extends State<HomePage> {
         'https://webhook.site/2748bc41-8599-4093-b8ad-93fd328f1cd2?data=$content'));
   }
 
-  void onEvent(CallEvent event) {
+  onEvent(event) {
     if (!mounted) return;
     setState(() {
-      textEvents += '${event.toString()}\n';
+      textEvents += "${event.toString()}\n";
     });
   }
 }

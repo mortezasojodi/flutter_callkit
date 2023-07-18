@@ -11,14 +11,10 @@ class AppRoute {
     switch (settings.name) {
       case homePage:
         return MaterialPageRoute(
-          builder: (_) => const HomePage(),
-          settings: settings,
-        );
+            builder: (_) => HomePage(), settings: settings);
       case callingPage:
         return MaterialPageRoute(
-          builder: (_) => const CallingPage(),
-          settings: settings,
-        );
+            builder: (_) => CallingPage(), settings: settings);
       default:
         return null;
     }

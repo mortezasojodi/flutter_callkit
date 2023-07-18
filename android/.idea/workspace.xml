@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c50dd7d-9886-4c4b-810c-700c92be69fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/dictionaries/hiennguyen92.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Dart_SDK.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations/example_lib_main_dart.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitIncomingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/CallkitIncomingActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/FlutterCallkitIncomingPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/FlutterCallkitIncomingPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-w600dp-land/activity_callkit_incoming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../example/ios/Runner/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../example/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/lib/app_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/lib/app_router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/lib/calling_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/lib/calling_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/lib/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../example/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ios/Assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/flutter_callkit_incoming_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../test/flutter_callkit_incoming_test.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
+  <component name="ProjectId" id="2SkkX1EzM9jPAF3Z8eFTlsZTE09" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c50dd7d-9886-4c4b-810c-700c92be69fc" name="Changes" comment="" />
+      <created>1689698002961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689698002961</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/hiennv/flutter_callkit_incoming/FlutterCallkitIncomingPlugin.kt</url>
+          <line>203</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

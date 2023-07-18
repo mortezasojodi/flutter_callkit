@@ -8,8 +8,6 @@ import 'package:flutter_callkit_incoming_example/navigation_service.dart';
 import 'package:http/http.dart';
 
 class CallingPage extends StatefulWidget {
-  const CallingPage({super.key});
-
   @override
   State<StatefulWidget> createState() {
     return CallingPageState();
@@ -19,12 +17,12 @@ class CallingPage extends StatefulWidget {
 class CallingPageState extends State<CallingPage> {
   late CallKitParams? calling;
 
-  Timer? _timer;
+  Timer? _timer = null;
   int _start = 0;
 
   void startTimer() {
-    const oneSec = Duration(seconds: 1);
-    _timer = Timer.periodic(
+    const oneSec = const Duration(seconds: 1);
+    _timer = new Timer.periodic(
       oneSec,
       (Timer timer) {
         setState(() {
@@ -39,9 +37,12 @@ class CallingPageState extends State<CallingPage> {
     h = value ~/ 3600;
     m = ((value - h * 3600)) ~/ 60;
     s = value - (h * 3600) - (m * 60);
-    String hourLeft = h.toString().length < 2 ? '0$h' : h.toString();
-    String minuteLeft = m.toString().length < 2 ? '0$m' : m.toString();
-    String secondsLeft = s.toString().length < 2 ? '0$s' : s.toString();
+    String hourLeft =
+        h.toString().length < 2 ? "0" + h.toString() : h.toString();
+    String minuteLeft =
+        m.toString().length < 2 ? "0" + m.toString() : m.toString();
+    String secondsLeft =
+        s.toString().length < 2 ? "0" + s.toString() : s.toString();
     String result = "$hourLeft:$minuteLeft:$secondsLeft";
     return result;
   }
@@ -56,7 +57,7 @@ class CallingPageState extends State<CallingPage> {
     var timeDisplay = intToTimeLeft(_start);
 
     return Scaffold(
-      body: SizedBox(
+      body: Container(
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         child: Center(
@@ -64,8 +65,8 @@ class CallingPageState extends State<CallingPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(timeDisplay),
-              const Text('Calling...'),
+              Text('$timeDisplay'),
+              Text('Calling...'),
               TextButton(
                 style: ButtonStyle(
                   foregroundColor:
@@ -77,7 +78,7 @@ class CallingPageState extends State<CallingPage> {
                     startTimer();
                   }
                 },
-                child: const Text('Fake Connected Call'),
+                child: Text('Fake Connected Call'),
               ),
               TextButton(
                 style: ButtonStyle(
@@ -92,7 +93,7 @@ class CallingPageState extends State<CallingPage> {
                   NavigationService.instance.goBack();
                   await requestHttp('END_CALL');
                 },
-                child: const Text('End Call'),
+                child: Text('End Call'),
               )
             ],
           ),

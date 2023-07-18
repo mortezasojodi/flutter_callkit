@@ -144,7 +144,6 @@ class FlutterCallkitIncomingPlugin : FlutterPlugin, MethodCallHandler, ActivityA
             it.get()?.send(CallkitConstants.ACTION_CALL_CUSTOM, body)
         }
     }
-
     fun getAppState(context: Context): String {
         val packageManager = context.packageManager
         try {
@@ -185,7 +184,6 @@ class FlutterCallkitIncomingPlugin : FlutterPlugin, MethodCallHandler, ActivityA
             return "Not installed"
         }
     }
-
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         try {
             when (call.method) {
@@ -201,7 +199,7 @@ class FlutterCallkitIncomingPlugin : FlutterPlugin, MethodCallHandler, ActivityA
                     )
                     result.success("OK")
                 }
-                "isBackground" -> {
+                 "isBackground" -> {
                     val state= getAppState(context!!)
                     result.success(state)
                 }
